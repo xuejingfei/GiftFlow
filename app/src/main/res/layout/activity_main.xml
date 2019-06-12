@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.module.giftflowdemo.RelativeLayoutTest1
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+    <com.module.giftflowdemo.RelativeLayoutTest2
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <com.module.giftflowdemo.TextViewTest
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src = "@mipmap/ic_launcher"
+            android:layout_marginTop="400dp"
+            android:id="@+id/iv_start"/>
+
+    <ImageView
+        android:id="@+id/iv_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src = "@mipmap/ic_launcher"
+        android:layout_marginTop="400dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tv_btn"
+        android:text="开始"
+        android:textSize="20dp"
+        android:layout_centerInParent="true"
+    />
+    </com.module.giftflowdemo.RelativeLayoutTest2>
+    <com.module.giftflowdemo.GiftFlowView
+            android:id="@+id/view_flow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+</com.module.giftflowdemo.RelativeLayoutTest1>
