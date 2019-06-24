@@ -5,6 +5,7 @@ import android.os.Build
 import android.os.Bundle
 import android.support.annotation.RequiresApi
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.widget.RelativeLayout
@@ -34,6 +35,44 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    override fun dispatchTouchEvent(ev: MotionEvent?): Boolean {
+        when(ev?.action) {
+            MotionEvent.ACTION_DOWN ->{
+                Log.d("xjf", "MainActivity_dispatchTouchEvent" + "ACTION_DOWN")
+
+            }
+            MotionEvent.ACTION_MOVE ->{
+                Log.d("xjf", "MainActivity_dispatchTouchEvent" + "ACTION_MOVE")
+            }
+            MotionEvent.ACTION_UP ->{
+                Log.d("xjf", "MainActivity_dispatchTouchEvent" + "ACTION_UP")
+            }
+            MotionEvent.ACTION_CANCEL ->{
+                Log.d("xjf", "MainActivity_dispatchTouchEvent" + "ACTION_CANCEL")
+            }
+        }
+        return super.dispatchTouchEvent(ev)
+    }
+
+
+    @SuppressLint("ClickableViewAccessibility")
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
+        when(event?.action) {
+            MotionEvent.ACTION_DOWN ->{
+                Log.d("xjf", "MainActivity_onTouchEvent" + "ACTION_DOWN")
+            }
+            MotionEvent.ACTION_MOVE ->{
+                Log.d("xjf", "MainActivity_onTouchEvent" + "ACTION_MOVE")
+            }
+            MotionEvent.ACTION_UP ->{
+                Log.d("xjf", "MainActivity_onTouchEvent" + "ACTION_UP")
+            }
+            MotionEvent.ACTION_CANCEL ->{
+                Log.d("xjf", "MainActivity_onTouchEvent" + "ACTION_CANCEL")
+            }
+        }
+        return super.onTouchEvent(event)
+    }
 
     inner class TouchSlipListener:View.OnTouchListener {
         private  var lastX:Int = 0

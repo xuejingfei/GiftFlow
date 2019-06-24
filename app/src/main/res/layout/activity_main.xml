@@ -11,32 +11,41 @@
             android:layout_height="match_parent">
 
         <com.module.giftflowdemo.TextViewTest
+                android:id="@+id/tv_textView"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="200dp"
+                android:text="textView"/>
 
-    <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src = "@mipmap/ic_launcher"
-            android:layout_marginTop="400dp"
-            android:id="@+id/iv_start"/>
+        <com.module.giftflowdemo.ButtonViewTest
+                android:id="@+id/tv_button"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:text="button"
+                android:layout_below="@+id/tv_textView"/>
 
-    <ImageView
-        android:id="@+id/iv_end"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src = "@mipmap/ic_launcher"
-        android:layout_marginTop="400dp"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginTop="400dp"
+                android:id="@+id/iv_start"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/tv_btn"
-        android:text="开始"
-        android:textSize="20dp"
-        android:layout_centerInParent="true"
-    />
+        <ImageView
+                android:id="@+id/iv_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher"
+                android:layout_marginTop="400dp"/>
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/tv_btn"
+                android:text="开始"
+                android:textSize="20dp"
+                android:layout_centerInParent="true"
+        />
     </com.module.giftflowdemo.RelativeLayoutTest2>
     <com.module.giftflowdemo.GiftFlowView
             android:id="@+id/view_flow"
